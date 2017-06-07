@@ -13,10 +13,6 @@ app.get('/', function (req, res) {
   res.render("clientList", {clients : clientList});
 });
 
-app.get('/update', function (req, res) { 
-  res.render("clientList", {clients : clientList});
-});
-
 app.get('/delete', function (req, res) { 
   console.log(req.query.i);
   clientList.splice(req.query.i, 1);
